@@ -3,7 +3,7 @@
 This repository is a growing collection of practical backend exercises written in C# to sharpen my skills in logic, problem solving, and real-world development workflows.
 
 Each folder contains:
-- A focused coding exercise (`Program.cs`), that includes my rough Input/Process/Output breakdowns before solving the problem
+- A focused coding exercise (`Program.cs`), that includes mock real life user stories, my rough Input/Process/Output breakdowns before solving the problem
 - A `README.md` explaining the problem, concepts practiced, and potential extensions
 
 ## ✅ Topics Covered So Far:
