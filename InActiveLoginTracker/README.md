@@ -16,14 +16,13 @@ Given a list of users with their `UserId` and `LastLogin` date, return a list of
 - Skips users with null or empty `UserId`
 - Returns a list of user IDs that meet the inactivity condition
 
----
 
 ## Folder Structure
 ```InActiveLoginTracker/ 
 ├── InActiveLoginTracker.csproj 
 ├── InActiveUserLoginTracker.cs 
-└── README.md```
-
+└── README.md
+```
 
 ## Example Output
 
