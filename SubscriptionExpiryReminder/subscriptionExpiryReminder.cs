@@ -4,7 +4,7 @@ namespace CSharpStarter
     {
         public class User
         {
-            public string UserId { get; set; }
+            public string? UserId { get; set; }
             public DateTime ExpirationDate { get; set; }
         }
 
@@ -21,7 +21,7 @@ namespace CSharpStarter
                     new User { UserId = "00005", ExpirationDate = DateTime.Today.AddDays(15) },
                     new User { UserId = "00006", ExpirationDate = DateTime.Today.AddDays(25) },
                 };
-                List<string> usersExpiringSoon = GetUsersExpiringSoon (subscriptionUsers);
+                List<string> usersExpiringSoon = GetUsersExpiringSoon (subscriptionUsers, 15);
 
                 Console.WriteLine ("Users with subscription expiring in the next 30 days:");
                 foreach(var id in usersExpiringSoon ) 
@@ -29,8 +29,14 @@ namespace CSharpStarter
                     Console.WriteLine (id);
                 }
             }
-            public static List<string> GetUsersExpiringSoon (List<User> subscriptionUsers)
+            public static List<string> GetUsersExpiringSoon (List<User> subscriptionUsers, int daysUntilExpiry)
             {
+                if(daysUntilExpiry <= 0)
+                {
+                    Console.WriteLine("Invalid expiration window. Must be greater than 0."); // 
+                    return new List<string>();
+                }
+
                 if(subscriptionUsers.Count == 0)
                 {
                     //return null;
@@ -42,13 +48,16 @@ namespace CSharpStarter
                 foreach (User user in subscriptionUsers)
                 {
                     if (user.ExpirationDate >= DateTime.Today && 
-                        user.ExpirationDate <= DateTime.Today.AddDays(30))
+                        user.ExpirationDate <= DateTime.Today.AddDays(daysUntilExpiry))
                     {
-                        expiringUserIds.Add(user.UserId);
+                        if(!string.IsNullOrEmpty(user.UserId))
+                        {
+                            expiringUserIds.Add(user.UserId);
+                        }
                     }
                 }
 
-                if(expiringUserIds .Count == 0)
+                if(expiringUserIds.Count == 0)
                 {
                     Console.WriteLine("No user IDs found with subscriptions expiring soon.");
                 }
@@ -93,3 +102,12 @@ namespace CSharpStarter
 // A List<string> of UserId's
 // Plus: console messages if needed
 
+// Remix/Minor Stretch goal #1
+// Make subscription window dynamic
+// Pass in daysUntilExpiry as a parameter to filter users based on expiration range (e.g., 15, 60, or 90 days)
+//  Goal:
+// instead of always using 30 days, we'll
+// 1. Accept a parameter int daysUntilExpiry
+// 2. Filter users whose ExpirationDate is:
+// a. >= DateTime.Today
+// b. <= DateTime.Today.AddDays(daysUntilExpiry)

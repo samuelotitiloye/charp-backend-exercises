@@ -1,0 +1,14 @@
+/Users/samueltitiloye/Documents/Dev/Projects/CSharpExercises/csharp-backend-exercises/SubscriptionExpiryReminder/obj/Debug/net7.0/SubscriptionExpiryReminder.GeneratedMSBuildEditorConfig.editorconfig
+/Users/samueltitiloye/Documents/Dev/Projects/CSharpExercises/csharp-backend-exercises/SubscriptionExpiryReminder/obj/Debug/net7.0/SubscriptionExpiryReminder.AssemblyInfoInputs.cache
+/Users/samueltitiloye/Documents/Dev/Projects/CSharpExercises/csharp-backend-exercises/SubscriptionExpiryReminder/obj/Debug/net7.0/SubscriptionExpiryReminder.AssemblyInfo.cs
+/Users/samueltitiloye/Documents/Dev/Projects/CSharpExercises/csharp-backend-exercises/SubscriptionExpiryReminder/obj/Debug/net7.0/SubscriptionExpiryReminder.csproj.CoreCompileInputs.cache
+/Users/samueltitiloye/Documents/Dev/Projects/CSharpExercises/csharp-backend-exercises/SubscriptionExpiryReminder/bin/Debug/net7.0/SubscriptionExpiryReminder
+/Users/samueltitiloye/Documents/Dev/Projects/CSharpExercises/csharp-backend-exercises/SubscriptionExpiryReminder/bin/Debug/net7.0/SubscriptionExpiryReminder.deps.json
+/Users/samueltitiloye/Documents/Dev/Projects/CSharpExercises/csharp-backend-exercises/SubscriptionExpiryReminder/bin/Debug/net7.0/SubscriptionExpiryReminder.runtimeconfig.json
+/Users/samueltitiloye/Documents/Dev/Projects/CSharpExercises/csharp-backend-exercises/SubscriptionExpiryReminder/bin/Debug/net7.0/SubscriptionExpiryReminder.dll
+/Users/samueltitiloye/Documents/Dev/Projects/CSharpExercises/csharp-backend-exercises/SubscriptionExpiryReminder/bin/Debug/net7.0/SubscriptionExpiryReminder.pdb
+/Users/samueltitiloye/Documents/Dev/Projects/CSharpExercises/csharp-backend-exercises/SubscriptionExpiryReminder/obj/Debug/net7.0/SubscriptionExpiryReminder.dll
+/Users/samueltitiloye/Documents/Dev/Projects/CSharpExercises/csharp-backend-exercises/SubscriptionExpiryReminder/obj/Debug/net7.0/refint/SubscriptionExpiryReminder.dll
+/Users/samueltitiloye/Documents/Dev/Projects/CSharpExercises/csharp-backend-exercises/SubscriptionExpiryReminder/obj/Debug/net7.0/SubscriptionExpiryReminder.pdb
+/Users/samueltitiloye/Documents/Dev/Projects/CSharpExercises/csharp-backend-exercises/SubscriptionExpiryReminder/obj/Debug/net7.0/SubscriptionExpiryReminder.genruntimeconfig.cache
+/Users/samueltitiloye/Documents/Dev/Projects/CSharpExercises/csharp-backend-exercises/SubscriptionExpiryReminder/obj/Debug/net7.0/ref/SubscriptionExpiryReminder.dll
