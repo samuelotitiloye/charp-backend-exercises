@@ -17,6 +17,7 @@ Each folder contains:
 - `PremiumFoodOrders/` – Filters expensive orders using threshold logic
 - `SubscriptionExpiryReminder/` – Identifies users with subscriptions expiring in 30 days
 - `VehicleServiceCheck/` – Returns vehicles that need servicing based on mileage
+- InActiveLoginTracker/ – Identifies users who haven’t logged in within a specified number of days, with safeguards for invalid or future-dated activity
 
 ## 🧱 Next Steps:
 I’m continuing to add new exercises and remixes to:
