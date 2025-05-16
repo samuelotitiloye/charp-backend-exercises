@@ -1,0 +1,14 @@
+/Users/samueltitiloye/Documents/Dev/Projects/CSharpExercises/csharp-backend-exercises/InActiveLoginTracker/bin/Debug/net7.0/InActiveLoginTracker
+/Users/samueltitiloye/Documents/Dev/Projects/CSharpExercises/csharp-backend-exercises/InActiveLoginTracker/bin/Debug/net7.0/InActiveLoginTracker.deps.json
+/Users/samueltitiloye/Documents/Dev/Projects/CSharpExercises/csharp-backend-exercises/InActiveLoginTracker/bin/Debug/net7.0/InActiveLoginTracker.runtimeconfig.json
+/Users/samueltitiloye/Documents/Dev/Projects/CSharpExercises/csharp-backend-exercises/InActiveLoginTracker/bin/Debug/net7.0/InActiveLoginTracker.dll
+/Users/samueltitiloye/Documents/Dev/Projects/CSharpExercises/csharp-backend-exercises/InActiveLoginTracker/bin/Debug/net7.0/InActiveLoginTracker.pdb
+/Users/samueltitiloye/Documents/Dev/Projects/CSharpExercises/csharp-backend-exercises/InActiveLoginTracker/obj/Debug/net7.0/InActiveLoginTracker.GeneratedMSBuildEditorConfig.editorconfig
+/Users/samueltitiloye/Documents/Dev/Projects/CSharpExercises/csharp-backend-exercises/InActiveLoginTracker/obj/Debug/net7.0/InActiveLoginTracker.AssemblyInfoInputs.cache
+/Users/samueltitiloye/Documents/Dev/Projects/CSharpExercises/csharp-backend-exercises/InActiveLoginTracker/obj/Debug/net7.0/InActiveLoginTracker.AssemblyInfo.cs
+/Users/samueltitiloye/Documents/Dev/Projects/CSharpExercises/csharp-backend-exercises/InActiveLoginTracker/obj/Debug/net7.0/InActiveLoginTracker.csproj.CoreCompileInputs.cache
+/Users/samueltitiloye/Documents/Dev/Projects/CSharpExercises/csharp-backend-exercises/InActiveLoginTracker/obj/Debug/net7.0/InActiveLoginTracker.dll
+/Users/samueltitiloye/Documents/Dev/Projects/CSharpExercises/csharp-backend-exercises/InActiveLoginTracker/obj/Debug/net7.0/refint/InActiveLoginTracker.dll
+/Users/samueltitiloye/Documents/Dev/Projects/CSharpExercises/csharp-backend-exercises/InActiveLoginTracker/obj/Debug/net7.0/InActiveLoginTracker.pdb
+/Users/samueltitiloye/Documents/Dev/Projects/CSharpExercises/csharp-backend-exercises/InActiveLoginTracker/obj/Debug/net7.0/InActiveLoginTracker.genruntimeconfig.cache
+/Users/samueltitiloye/Documents/Dev/Projects/CSharpExercises/csharp-backend-exercises/InActiveLoginTracker/obj/Debug/net7.0/ref/InActiveLoginTracker.dll
