@@ -26,14 +26,14 @@ Given a list of users with their `UserId` and `LastLogin` date, return a list of
 
 ## Example Output
 
-Warning: User 6f1e4500 has a future login date. 
+```Warning: User 6f1e4500 has a future login date. 
 Warning: User 6f1e4502 has a future login date.
 Warning: User 6f1e4503 has a future login date. 
 Warning: User 6f1e4504 has a future login date. 
 Warning: User 6f1e4505 has a future login date. 
 Warning: User 6f1e4507 has a future login date. 
 users with inActive login userIds: 6f1e4501
-
+```
 
 ## How to Run
 
@@ -42,8 +42,8 @@ users with inActive login userIds: 6f1e4501
    ```cd InActiveLoginTracker```
 
 2. Build and run the app:  
-  ```dotnet build```
-   ```dotnet run```
+ - ```dotnet build```
+ - ```dotnet run```
 
 ## What I Learned
 - How to filter a list using custom conditions
