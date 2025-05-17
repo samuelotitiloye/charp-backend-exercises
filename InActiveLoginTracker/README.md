@@ -61,7 +61,7 @@ This logic could be extended to:
 
 
 ## Extension: Writing to File
-- Next Step #2
+ Next Step #2 
 - This logic writes the filtered inactive users to a text file...
 
 - Validate that the list is not null or empty
@@ -75,9 +75,11 @@ This logic could be extended to:
 
 - File: `inactive-users-log.txt`
 - Format:
-- ```Inactive User IDs:``` 
-- ```Timestamp: 5/16/2025 7:51:37 PM```
-- ```6f1e4501```
+```Inactive User IDs:
+   Timestamp: 5/16/2025 7:51:37 PM
+   6f1e4501
+   ```
+    
 
 ## What I Learned
 - How to write to a file using File.AppendAllLines
