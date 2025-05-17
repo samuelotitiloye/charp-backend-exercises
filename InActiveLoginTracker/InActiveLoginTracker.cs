@@ -30,6 +30,7 @@ namespace CSharpExercises.csharp_backend_exercises.InActiveLoginTracker
                 {
                     Console.WriteLine(id);
                 }
+                WriteInactiveUsersToFile(InActiveUsers);
             }
             public static List<string> GetInActiveUsers(List<UserLogin> activeUsers, int daysThreshold)
             {
@@ -75,6 +76,27 @@ namespace CSharpExercises.csharp_backend_exercises.InActiveLoginTracker
                 }
                 return inActiveUsers;
             }
+
+            //add a new method WriteInactiveUsersToFile(List<string>userIds)
+            //format the data with timestamps + labels
+            //use File.AppendAllText() or StreamWriter to write a .txt file
+            public static void WriteInactiveUsersToFile(List<string> userIds)
+            {
+                if(userIds == null || userIds.Count == 0) //empty/null check
+                {
+                    Console.WriteLine("Warning: No inactive users to write.");
+                    return; 
+                }
+                List<string> linesToWrite = new List<string>(); //build a List of lines
+                linesToWrite.Add("Inactive User IDs:"); //create a label
+                linesToWrite.Add($"Timestamp: {DateTime.Now}");
+
+                foreach (var id in userIds) // loop through userIds
+                {
+                    linesToWrite.Add($"- {id}");
+                }
+                File.AppendAllLines("inactive-users-log.txt", linesToWrite); //write/add loop result to file
+            }
         }
     }
 }
@@ -103,4 +125,41 @@ namespace CSharpExercises.csharp_backend_exercises.InActiveLoginTracker
 // A list of user IDs (strings) who have been inactive for more than 30 days
 // inactive means LastLogin date is older than DateTime.Today.AddDays(-30)
 
-// Stretch/remix - possible edge cases?
+// Stretch/remix/Next steps
+// Write results to a file:
+// As an Admin, I want to save a list of inactive user IDs to a file,
+// so that i can review or process them later
+
+//Input:
+// what kind of data do we already have?
+//  -> a List of inActiveUsers IDs
+// what data type are we working with?
+//  -> List<string>
+
+//Process:
+// what action are we performing with that data?
+//  -> save a list of existing inActiveUser Ids to a file
+// what kind of formatting or logic is needed
+//  -> do we want each user Id on its own line? something like 6f1e4501, 6f1e4504, 6f1e4507
+//  -> should there be a timestamp?
+//  -> maybe labels or separators? 
+//  ----> something like: InActive User IDs:
+//                        - 6f1e4501  
+//                        - 6f1e4504
+//  -> should it overwrite the file every time? probably not a good idea for long term data history access
+//  -> should it append to the existing file?
+//  -> should a new file be created if one doesn't exist?
+//  -> should a new file be created each time the db is queried for inActiveUser IDs?
+
+//Output:
+// what is the expected result?
+// --> save a List<> of inActiveUser IDs to a file.
+
+// where should the result be stored?
+//  --> a .txt file? evolve to a CSV later (learn/research how to do this)
+//  --> project directory for now, or bin/Debug/netX folder?
+
+// error handling - do we need this now on a micro scale?
+// failure due to different permissions? this would depend on a larger scale project i'd assume
+
+// in general, before we save anything, how do we want to shape, format and manage the data being written?

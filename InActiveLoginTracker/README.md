@@ -59,6 +59,15 @@ This logic could be extended to:
 - Accept dynamic user input or read from JSON/CSV
 - Visualize inactivity data on a dashboard
 
+
+## InActiveLoginTracker/README.md
+
+## Extension: Writing to File
+Stretch goal #2
+This logic writes the filtered inactive users to a text file...
+
+
+
 ## Author: 
 Samuel Titiloye
 [LinkedIn](https://www.linkedin.com/in/samueltitiloye/) | [GitHub](https://github.com/samuelotitiloye)
