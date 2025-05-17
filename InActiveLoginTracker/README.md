@@ -75,7 +75,7 @@ This logic could be extended to:
 
 - File: `inactive-users-log.txt`
 - Format:
-```Inactive User IDs:
+ ```Inactive User IDs:
    Timestamp: 5/16/2025 7:51:37 PM
    6f1e4501
    ```
