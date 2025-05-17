@@ -54,10 +54,12 @@ users with inActive login userIds: 6f1e4501
 
 ## Next Steps
 This logic could be extended to:
-- Trigger emails for inactive users
-- Write results to a file or database
-- Accept dynamic user input or read from JSON/CSV
-- Visualize inactivity data on a dashboard
+- [x] Identify inactive users based on last login
+- [x] Write results to a file
+- [ ] Accept user input from terminal
+- [ ] Read users from a JSON/CSV source
+- [ ] Extend to email notifications (mock/stub)
+- [ ] Unit test core logic
 
 
 ## Extension: Writing To A File
@@ -88,11 +90,13 @@ This logic could be extended to:
 - How to validate inputs defensively
 - The importance of logging and audit trails in backend systems
 
-## Next Steps:
-- Write output in .csv format
-- Add user-specified filename input
-- Log multiple batches with timestamps
-- Send files via email or upload to cloud storage
+## Next Steps
+Track enhancements and future improvements for this feature:
+- [ ] Write output in `.csv` format for easier data processing
+- [ ] Allow **user-specified filename** as input for flexibility
+- [ ] Log **multiple batches** of inactive users with timestamps (append mode)
+- [ ] Enable sending files via **email** or **upload to cloud storage** (e.g., S3 or Azure Blob)
+
 
 
 ## Author: 
