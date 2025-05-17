@@ -60,12 +60,36 @@ This logic could be extended to:
 - Visualize inactivity data on a dashboard
 
 
-## InActiveLoginTracker/README.md
-
 ## Extension: Writing to File
-Stretch goal #2
+Next Step #2
 This logic writes the filtered inactive users to a text file...
 
+- Validate that the list is not null or empty
+- Add a title and timestamp to the output
+- Loop through user IDs and format each one (e.g., `- 6f1e4501`)
+- Write the list to a file called `inactive-users-log.txt`
+  - If the file exists, it appends
+  - If not, it creates one
+
+## Output
+
+- File: `inactive-users-log.txt`
+- Format:
+```Inactive User IDs:``` 
+```Timestamp: 5/16/2025 7:51:37 PM```
+```6f1e4501```
+
+## What I Learned
+How to write to a file using File.AppendAllLines
+How to shape and format strings for readable logging
+How to validate inputs defensively
+The importance of logging and audit trails in backend systems
+
+## Next Steps:
+Write output in .csv format
+Add user-specified filename input
+Log multiple batches with timestamps
+Send files via email or upload to cloud storage
 
 
 ## Author: 
