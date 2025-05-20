@@ -31,6 +31,11 @@ namespace CSharpExercises.csharp_backend_exercises.InActiveLoginTracker
                     Console.WriteLine(id);
                 }
                 WriteInactiveUsersToFile(InActiveUsers);
+                var inActiveUsers = new List<UserLogin>
+                {  
+                    new UserLogin { UserId = "abc123", LastLogin = DateTime.Today.AddDays(-30)}
+                };
+                ExportInactiveUsersToCsv(inActiveUsers);
             }
             public static List<string> GetInActiveUsers(List<UserLogin> activeUsers, int daysThreshold)
             {
@@ -82,10 +87,10 @@ namespace CSharpExercises.csharp_backend_exercises.InActiveLoginTracker
             //use File.AppendAllText() or StreamWriter to write a .txt file
             public static void WriteInactiveUsersToFile(List<string> userIds)
             {
-                if(userIds == null || userIds.Count == 0) //empty/null check
+                if (userIds == null || userIds.Count == 0) //empty/null check
                 {
                     Console.WriteLine("Warning: No inactive users to write.");
-                    return; 
+                    return;
                 }
                 List<string> linesToWrite = new List<string>(); //build a List of lines
                 linesToWrite.Add("Inactive User IDs:"); //create a label
@@ -96,6 +101,43 @@ namespace CSharpExercises.csharp_backend_exercises.InActiveLoginTracker
                     linesToWrite.Add($"- {id}");
                 }
                 File.AppendAllLines("inactive-users-log.txt", linesToWrite); //write/add loop result to file
+            }
+
+            public static void ExportInactiveUsersToCsv(List<UserLogin> inActiveUsers)
+            {
+                //  extend the existing method that writes to a .txt file to instead output a .csv file
+                //  with structured data that could later be sent via email or uploaded to cloud storage.
+
+                //1. check if is null/empty - done
+                //2. Define the file path("inactive-users.csv")
+                //3. prepare a list of lines to write (List<string> linesToExport)
+                //4. if file doesn't exist, add header "UserId,LastLogin"
+                //5. Loop through inactiveUsers, and add lines like "userId,date"
+                //6. append to file
+                //7. stretch?: confirm in console
+
+                if (inActiveUsers == null || inActiveUsers.Count == 0)
+                {
+                    Console.WriteLine("Warning: No inactive users to write."); //null check
+                    return;
+                }
+                string filePath = "inactive-users.csv"; // define file path
+                List<string> linesToExport = new List<string>(); // list of lines to write/export
+            
+                // add header
+                if (!File.Exists(filePath))
+                {
+                    linesToExport.Add("UserId,LastLogin"); // append to file
+                }
+
+                //loop through inactiveUsers
+                foreach (var user in inActiveUsers)
+                {
+                    linesToExport.Add($"{user.UserId},{user.LastLogin:yyyy-MM-dd}");; 
+                }
+                
+                File.AppendAllLines(filePath, linesToExport);
+                Console.WriteLine("Export complete. File Updated.");
             }
         }
     }

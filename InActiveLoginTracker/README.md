@@ -92,7 +92,7 @@ This logic could be extended to:
 
 ## Next Steps
 Track enhancements and future improvements for this feature:
-- [ ] Write output in `.csv` format for easier data processing
+- [x] Write output in `.csv` format for easier data processing
 - [ ] Allow **user-specified filename** as input for flexibility
 - [ ] Log **multiple batches** of inactive users with timestamps (append mode)
 - [ ] Enable sending files via **email** or **upload to cloud storage** (e.g., S3 or Azure Blob)
