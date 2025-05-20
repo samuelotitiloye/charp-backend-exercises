@@ -1,3 +1,5 @@
+using System.Threading;
+
 namespace CSharpExercises.csharp_backend_exercises.InActiveLoginTracker
 {
     public class InActiveUserLoginTracker
@@ -121,7 +123,9 @@ namespace CSharpExercises.csharp_backend_exercises.InActiveLoginTracker
                     Console.WriteLine("Warning: No inactive users to write."); //null check
                     return;
                 }
-                string filePath = "inactive-users.csv"; // define file path
+                string timestamp = DateTime.Now.ToString("yyyy-MM-dd-HHmm");
+                string filePath = $"inactive-users-{timestamp}.csv"; // define file path with timestamp
+               // string filePath = "inactive-users.csv"; // define file path for .csv
                 List<string> linesToExport = new List<string>(); // list of lines to write/export
             
                 // add header
@@ -137,7 +141,13 @@ namespace CSharpExercises.csharp_backend_exercises.InActiveLoginTracker
                 }
                 
                 File.AppendAllLines(filePath, linesToExport);
-                Console.WriteLine("Export complete. File Updated.");
+
+                Console.WriteLine($"\nSimulating cloud upload for: {filePath}...");
+                Thread.Sleep(2000);// pause for 2 seconds to simulate delay
+                
+                Console.WriteLine("Upload successful: (simulated)\n");
+                Console.WriteLine($"Export complete. File saved as: {filePath}");
+                Console.WriteLine($"Uploading {filePath} to cloud storage.....[SIMULATED]");
             }
         }
     }

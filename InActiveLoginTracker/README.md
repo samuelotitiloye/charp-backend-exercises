@@ -92,10 +92,28 @@ This logic could be extended to:
 
 ## Next Steps
 Track enhancements and future improvements for this feature:
-- [x] Write output in `.csv` format for easier data processing
-- [ ] Allow **user-specified filename** as input for flexibility
-- [ ] Log **multiple batches** of inactive users with timestamps (append mode)
-- [ ] Enable sending files via **email** or **upload to cloud storage** (e.g., S3 or Azure Blob)
+Completed Enhancements:
+[x] Identify inactive users based on LastLogin with a dynamic threshold
+[x] Write results to a .txt file with human-readable formatting
+[x] Export inactive users to .csv (with UserId, LastLogin)
+[x] Add dynamic file naming using timestamps (e.g., inactive-users-2025-05-17-1530.csv)
+[x] Simulate cloud upload using Thread.Sleep() and console output
+
+Still To Do:
+User Input & File Sourcing
+[ ] Accept filename or expiration threshold from terminal input
+[ ] Read user login data from a .json or .csv file
+
+Automation & Delivery
+[ ] Allow user-specified filename when exporting
+[ ] Append multiple export runs with timestamps
+[ ] Simulate email delivery or real cloud upload (S3, Azure Blob, etc.)
+
+Testing & Quality
+[ ] Unit test the core logic for inactive user filtering
+[ ]Add logging for skipped, invalid, or future-dated entries
+
+
 
 
 
