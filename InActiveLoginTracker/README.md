@@ -89,6 +89,11 @@ This logic could be extended to:
 - How to shape and format strings for readable logging
 - How to validate inputs defensively
 - The importance of logging and audit trails in backend systems
+-   ## Refactoring & Architecture
+- Refactored logic into `Services/` and `Helpers/`folders
+- Separated concerns by moving CSV formatting into `CsvHelper.cs`
+- Improved readability, reusability, and maintainability of codebase  
+
 
 ## Next Steps
 Track enhancements and future improvements for this feature:
@@ -100,8 +105,13 @@ Track enhancements and future improvements for this feature:
 - [x] Write output in `.csv` format for easier data processing
 - [x] Allow user-specified filename as input for flexibility
 - [x] Simulate cloud upload with timestamped output and console confirmation
+## Next Steps
+- [x] Allow user-specified filename when exporting
+- [x] Refactor `ExportInactiveUsersToCsv()` into smaller methods
+- [x] Move CSV formatting logic to a helper class (`CsvHelper`)
 
-#Still To Do:
+
+# Still To Do:
 User Input & File Sourcing
 - [ ] Accept filename or expiration threshold from terminal input
 - [ ] Read user login data from a .json or .csv file
@@ -113,7 +123,7 @@ User Input & File Sourcing
 
 # Testing & Quality
 - [ ] Unit test the core logic for inactive user filtering
-- [ ]Add logging for skipped, invalid, or future-dated entries
+- [ ] Add logging for skipped, invalid, or future-dated entries
 
 
 
