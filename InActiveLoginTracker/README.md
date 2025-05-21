@@ -92,28 +92,28 @@ This logic could be extended to:
 
 ## Next Steps
 Track enhancements and future improvements for this feature:
-Completed Enhancements:
-[x] Identify inactive users based on LastLogin with a dynamic threshold
-[x] Write results to a .txt file with human-readable formatting
-[x] Export inactive users to .csv (with UserId, LastLogin)
-[x] Add dynamic file naming using timestamps (e.g., inactive-users-2025-05-17-1530.csv)
-[x] Write output in `.csv` format for easier data processing
-[x] Allow user-specified filename as input for flexibility
-[x] Simulate cloud upload with timestamped output and console confirmation
+# Completed Enhancements:
+- [x] Identify inactive users based on LastLogin with a dynamic threshold
+- [x] Write results to a .txt file with human-readable formatting
+- [x] Export inactive users to .csv (with UserId, LastLogin)
+- [x] Add dynamic file naming using timestamps (e.g., inactive-users-2025-05-17-1530.csv)
+- [x] Write output in `.csv` format for easier data processing
+- [x] Allow user-specified filename as input for flexibility
+- [x] Simulate cloud upload with timestamped output and console confirmation
 
-Still To Do:
+#Still To Do:
 User Input & File Sourcing
-[ ] Accept filename or expiration threshold from terminal input
-[ ] Read user login data from a .json or .csv file
+- [ ] Accept filename or expiration threshold from terminal input
+- [ ] Read user login data from a .json or .csv file
 
-Automation & Delivery
-[ ] Allow user-specified filename when exporting
-[ ] Append multiple export runs with timestamps
-[ ] Simulate email delivery or real cloud upload (S3, Azure Blob, etc.)
+# Automation & Delivery
+- [ ] Allow user-specified filename when exporting
+- [ ] Append multiple export runs with timestamps
+- [ ] Simulate email delivery or real cloud upload (S3, Azure Blob, etc.)
 
-Testing & Quality
-[ ] Unit test the core logic for inactive user filtering
-[ ]Add logging for skipped, invalid, or future-dated entries
+# Testing & Quality
+- [ ] Unit test the core logic for inactive user filtering
+- [ ]Add logging for skipped, invalid, or future-dated entries
 
 
 
