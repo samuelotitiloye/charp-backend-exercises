@@ -104,7 +104,6 @@ namespace CSharpExercises.csharp_backend_exercises.InActiveLoginTracker
                 }
                 File.AppendAllLines("inactive-users-log.txt", linesToWrite); //write/add loop result to file
             }
-
             public static void ExportInactiveUsersToCsv(List<UserLogin> inActiveUsers)
             {
                 if (inActiveUsers == null || inActiveUsers.Count == 0)
@@ -122,7 +121,6 @@ namespace CSharpExercises.csharp_backend_exercises.InActiveLoginTracker
                 Console.WriteLine("Upload successful: (simulated)");
                 Console.WriteLine($"Uploading {filePath} to cloud storage.....[SIMULATED]");
             }
-
             private static string GetValidatedFilename()
             {
                 Console.WriteLine("Enter a filename for the export (without extension); ");
@@ -140,7 +138,6 @@ namespace CSharpExercises.csharp_backend_exercises.InActiveLoginTracker
                 }
                 return userInputFile;
             }
-
             private static List<string> BuildCsvContent(List<UserLogin> users)
             {
                 List<string> lines = new List<string> { "UserId,LastLogin" };
@@ -148,7 +145,7 @@ namespace CSharpExercises.csharp_backend_exercises.InActiveLoginTracker
                 {
                     lines.Add($"{user.UserId},{user.LastLogin:yyyy-MM-dd}");
                 }
-                return lines;
+                return lines; // end buildcsv logic
             }
         }
     }
