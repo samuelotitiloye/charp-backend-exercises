@@ -56,7 +56,7 @@ users with inActive login userIds: 6f1e4501
 This logic could be extended to:
 - [x] Identify inactive users based on last login
 - [x] Write results to a file
-- [ ] Accept user input from terminal
+- [x] Accept user input from terminal
 - [ ] Read users from a JSON/CSV source
 - [ ] Extend to email notifications (mock/stub)
 - [ ] Unit test core logic
@@ -97,7 +97,9 @@ Completed Enhancements:
 [x] Write results to a .txt file with human-readable formatting
 [x] Export inactive users to .csv (with UserId, LastLogin)
 [x] Add dynamic file naming using timestamps (e.g., inactive-users-2025-05-17-1530.csv)
-[x] Simulate cloud upload using Thread.Sleep() and console output
+[x] Write output in `.csv` format for easier data processing
+[x] Allow user-specified filename as input for flexibility
+[x] Simulate cloud upload with timestamped output and console confirmation
 
 Still To Do:
 User Input & File Sourcing

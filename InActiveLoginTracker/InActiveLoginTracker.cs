@@ -107,47 +107,48 @@ namespace CSharpExercises.csharp_backend_exercises.InActiveLoginTracker
 
             public static void ExportInactiveUsersToCsv(List<UserLogin> inActiveUsers)
             {
-                //  extend the existing method that writes to a .txt file to instead output a .csv file
-                //  with structured data that could later be sent via email or uploaded to cloud storage.
-
-                //1. check if is null/empty - done
-                //2. Define the file path("inactive-users.csv")
-                //3. prepare a list of lines to write (List<string> linesToExport)
-                //4. if file doesn't exist, add header "UserId,LastLogin"
-                //5. Loop through inactiveUsers, and add lines like "userId,date"
-                //6. append to file
-                //7. stretch?: confirm in console
-
                 if (inActiveUsers == null || inActiveUsers.Count == 0)
                 {
                     Console.WriteLine("Warning: No inactive users to write."); //null check
                     return;
                 }
-                string timestamp = DateTime.Now.ToString("yyyy-MM-dd-HHmm");
-                string filePath = $"inactive-users-{timestamp}.csv"; // define file path with timestamp
-               // string filePath = "inactive-users.csv"; // define file path for .csv
-                List<string> linesToExport = new List<string>(); // list of lines to write/export
-            
-                // add header
-                if (!File.Exists(filePath))
-                {
-                    linesToExport.Add("UserId,LastLogin"); // append to file
-                }
-
-                //loop through inactiveUsers
-                foreach (var user in inActiveUsers)
-                {
-                    linesToExport.Add($"{user.UserId},{user.LastLogin:yyyy-MM-dd}");; 
-                }
-                
+                string filePath = GetValidatedFilename(); // user helper to get filename
+                List<string> linesToExport = BuildCsvContent(inActiveUsers); // build csv lines
+          
                 File.AppendAllLines(filePath, linesToExport);
 
                 Console.WriteLine($"\nSimulating cloud upload for: {filePath}...");
                 Thread.Sleep(2000);// pause for 2 seconds to simulate delay
-                
-                Console.WriteLine("Upload successful: (simulated)\n");
-                Console.WriteLine($"Export complete. File saved as: {filePath}");
+                Console.WriteLine("Upload successful: (simulated)");
                 Console.WriteLine($"Uploading {filePath} to cloud storage.....[SIMULATED]");
+            }
+
+            private static string GetValidatedFilename()
+            {
+                Console.WriteLine("Enter a filename for the export (without extension); ");
+                string? userInputFile =  Console.ReadLine();
+
+                if (string.IsNullOrEmpty(userInputFile))
+                {
+                    Console.WriteLine("No filename entered. Using default export name.");
+                    return $"inactive-users-{DateTime.Now:yyyy-MM-dd-HHmm}.csv";
+                }
+
+                if (string.IsNullOrWhiteSpace(Path.GetExtension(userInputFile)))
+                {
+                    userInputFile += ".csv";
+                }
+                return userInputFile;
+            }
+
+            private static List<string> BuildCsvContent(List<UserLogin> users)
+            {
+                List<string> lines = new List<string> { "UserId,LastLogin" };
+                foreach (var user in users)
+                {
+                    lines.Add($"{user.UserId},{user.LastLogin:yyyy-MM-dd}");
+                }
+                return lines;
             }
         }
     }
@@ -215,3 +216,15 @@ namespace CSharpExercises.csharp_backend_exercises.InActiveLoginTracker
 // failure due to different permissions? this would depend on a larger scale project i'd assume
 
 // in general, before we save anything, how do we want to shape, format and manage the data being written?
+
+
+// public static void ExportInactiveUsersToCsv(List<UserLogin> inActiveUsers)
+ //  extend the existing method that writes to a .txt file to instead output a .csv file
+//  with structured data that could later be sent via email or uploaded to cloud storage.
+//1. check if is null/empty - done
+//2. Define the file path("inactive-users.csv")
+//3. prepare a list of lines to write (List<string> linesToExport)
+//4. if file doesn't exist, add header "UserId,LastLogin"
+//5. Loop through inactiveUsers, and add lines like "userId,date"
+//6. append to file
+//7. stretch?: confirm in console
