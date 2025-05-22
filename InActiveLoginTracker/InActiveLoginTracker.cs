@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using InActiveLoginTracker.Models;
 using InActiveLoginTracker.Services;
 
-
 namespace InActiveLoginTracker
 {
     public class Program

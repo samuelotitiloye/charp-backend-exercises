@@ -115,7 +115,7 @@ Track enhancements and future improvements for this feature:
 User Input & File Sourcing
 - [ ] Accept filename or expiration threshold from terminal input
 - [ ] Read user login data from a .json or .csv file
-
+- [ ] Add a /health endpoint to support service monitoring and readiness checks
 # Automation & Delivery
 - [ ] Allow user-specified filename when exporting
 - [ ] Append multiple export runs with timestamps
